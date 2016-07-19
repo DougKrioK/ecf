@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sped ECF</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrapValidator.css">
+	<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+	
+	<div class="container">
+		<header>
+			<div class="page-header">
+			  <h1>Modelo usabilidade ECF</h1>
+			</div>
+		</header>
+			
+
+		<main>
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Bloco 0</a></li>
+				<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Bloco Y</a></li>
+				<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+				<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home">
+					
+					<div class="panel panel-primary">
+						<div class="panel-heading">Registro 0000 - Abertura do Arquivo Digital e Identificação da Pessoa Jurídica</div>
+						<div class="panel-body">
+							<form class="form-horizontal">
+
+							  	<div class="form-group">
+							    	<label for="CNPJ" class="col-sm-6 control-label">4 - CNPJ - Número do CNPJ</label>
+								    <div class="col-sm-5">
+								      <input type="text" class="form-control cnpj" maxlength="14" id="CNPJ" placeholder="11.111.111/1111-11" required>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".CNPJ">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+							    </div>
+
+							    <div class="form-group">
+								    <label for="inputPassword3" class="col-sm-6 control-label">5 - NOME - Nome Empresarial</label>
+								    <div class="col-sm-5">
+								      <input type="text" required class="form-control" id="NOME" placeholder="Razão Social">
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".NOME">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+							    </div>
+
+								<div class="form-group">
+								    <label for="IND_SIT_INI_PER" class="col-sm-6 control-label">6 - IND_SIT_INI_PER - Indicador do Início do Período</label>
+								    <div class="col-sm-5">
+								    	<select name="IND_SIT_INI_PER" required class="form-control" id="IND_SIT_INI_PER">
+								    		<option value=""></option>
+								    		<option value="0">0 – Regular (Início no primeiro dia do ano)</option>
+								    		<option value="1">1 – Abertura (Início de atividades no ano-calendário)</option>
+								    		<option value="2">2 – Resultante de cisão/fusão ou remanescente de cisão, ou realizou incorporação</option>
+								    		<option value="4">4 – Início de obrigatoriedade da entrega no curso do ano calendário. (Ex. Exclusão do Simples Nacional
+											ou desenquadramento como imune ou isenta do IRPJ)
+											</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".IND_SIT_INI_PER">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+								    <label for="SIT_ESPECIAL" required class="col-sm-6 control-label">7 - SIT_ESPECIAL - Indicador de Situação Especial e Outros Eventos</label>
+								    <div class="col-sm-5">
+								    	<select name="SIT_ESPECIAL" class="form-control" id="SIT_ESPECIAL">
+								    		<option value=""></option>
+								    		<option value="0">0 – Normal (Sem ocorrência de situação especial ou evento)</option>
+											<option value="1">1 – Extinção</option>
+											<option value="2">2 – Fusão</option>
+											<option value="3">3 – Incorporação \ Incorporada</option>
+											<option value="4">4 – Incorporação \ Incorporadora</option>
+											<option value="5">5 – Cisão Total</option>
+											<option value="6">6 – Cisão Parcial</option>
+											<option value="8">8 – Desenquadramento de Imune/Isenta;</option>
+											<option value="9">9 – Inclusão no Simples Nacional</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".SIT_ESPECIAL">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+								    <label for="PAT_REMAN_CIS" class="col-sm-6 control-label">8 - PAT_REMAN_CIS - Patrimônio Remanescente em Caso de Cisão</label>
+								    <div class="col-sm-5">
+								      <input type="text" class="form-control" maxlength="8" id="PAT_REMAN_CIS" placeholder="Patrimônio Remanescente em Caso de Cisão (%).">
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".PAT_REMAN_CIS">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+								    <label for="DT_SIT_ESP" class="col-sm-6 control-label">9 - DT_SIT_ESP - Data da Situação Especial ou Evento</label>
+								    <div class="col-sm-5">
+								      <input type="date" class="form-control" id="DT_SIT_ESP">
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".DT_SIT_ESP">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+						   		</div>
+
+								<div class="form-group">
+								    <label for="RETIFICADORA" class="col-sm-6 control-label">12 - RETIFICADORA - Escrituração Retificadora</label>
+								    <div class="col-sm-5">
+										<select name="RETIFICADORA" required class="form-control" id="RETIFICADORA">
+											<option value=""></option>
+											<option value="S">S – ECF retificadora</option>
+											<option value="N">N – ECF original</option>
+											<option value="F">F – ECF original com mudança de forma de tributação (Art. 5o da Instrução Normativa no 166/1999).</option>
+											
+										</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".RETIFICADORA">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+								    <label for="NUM_REC" class="col-sm-6 control-label">13 - NUM_REC - Número do Recibo da ECF a Ser Retificada</label>
+								    <div class="col-sm-5">
+								      <input type="text" maxlength="41" class="form-control" id="NUM_REC" placeholder="Número do Recibo da ECF Anterior (hashcode)">
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".NUM_REC">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+								    <label for="TIP_ECF" class="col-sm-6 control-label">14 - TIP_ECF - Indicador do Tipo da ECF</label>
+								    <div class="col-sm-5">
+								     	<select name="TIP_ECF" required class="form-control" id="TIP_ECF">
+											<option value=""></option>
+											<option value="0">0 – ECF de empresa não participante de SCP como sócio ostensivo.</option>
+											<option value="1">1 – ECF de empresa participante de SCP como sócio ostensivo.</option>
+											<option value="2">2 – ECF da SCP</option>
+											
+										</select>
+								    </div>
+								    <div class="col-md-1">
+									    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".TIP_ECF">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+							    	</div>
+							  	</div>
+									<!--
+								<div class="form-group">
+								    <label for="COD_SCP" class="col-sm-6 control-label">15 - COD_SCP - Identificação da SCP</label>
+								    <div class="col-sm-5">
+								      <input type="text" maxlength="14" class="form-control cnpj" id="COD_SCP" placeholder="Identificação da SCP (CNPJ)">
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".COD_SCP">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+									-->
+
+
+
+
+							 
+							</form>
+						</div>
+					</div>
+
+					<div class="panel panel-primary">
+						<div class="panel-heading">Registro 0010: Parâmetros de Tributação</div>
+						<div class="panel-body">
+							<form class="form-horizontal" id="form-0000" name="form-0000">
+
+							  	<div class="form-group">
+									<label for="HASH_ECF_ANTERIOR" class="col-sm-6 control-label">2 - HASH_ECF_ANTERIOR - Hashcode da ECF do Período Imediatamente Anterior a Ser Recuperado</label>
+								    <div class="col-sm-5">
+								      <input type="text" class="form-control" maxlength="40" id="HASH_ECF_ANTERIOR" placeholder="Hashcode da ECF do Período Imediatamente Anterior (40 caracteres)">
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".HASH_ECF_ANTERIOR">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="OPT_REFIS" class="col-sm-6 control-label">3 - OPT_REFIS - Indicador de Optante pelo Refis</label>
+								    <div class="col-sm-5">
+								    	<select name="OPT_REFIS" required id="OPT_REFIS" class="form-control">
+								    		<option value=""></option>
+								    		<option value="S">S - Sim</option>
+								    		<option value="N">N – Não</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".OPT_REFIS">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="OPT_PAES" class="col-sm-6 control-label">4 - OPT_PAES - Indicador de Optante pelo Paesx</label>
+								    <div class="col-sm-5">
+								    	<select name="OPT_PAES" required id="OPT_PAES" class="form-control">
+								    		<option value=""></option>
+								    		<option value="S">S - Sim</option>
+								    		<option value="N">N – Não</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".OPT_PAES">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="FORMA_TRIB" class="col-sm-6 control-label">5 - FORMA_TRIB - Forma de Tributação</label>
+								    <div class="col-sm-5">
+								    	<select name="FORMA_TRIB" required id="FORMA_TRIB" class="form-control">
+								    		<option value=""></option>
+								    		<option value="1">1 – Lucro Real</option>
+											<option value="2">2 – Lucro Real/Arbitrado</option>
+											<option value="3">3 – Lucro Presumido/Real</option>
+											<option value="4">4 – Lucro Presumido/Real/Arbitrado</option>
+											<option value="5">5 – Lucro Presumido</option>
+											<option value="6">6 – Lucro Arbitrado</option>
+											<option value="7">7 – Lucro Presumido/Arbitrado</option>
+											<option value="8">8 – Imune do IRPJ</option>
+											<option value="9">9 – Isenta do IRPJ</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".FORMA_TRIB">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="FORMA_APUR" class="col-sm-6 control-label">6 - FORMA_APUR - Indicador do Período de Apuração do IRPJ e da CSLL</label>
+								    <div class="col-sm-5">
+								    	<select name="FORMA_APUR" id="FORMA_APUR" class="form-control">
+								    		<option value=""></option>
+								    		<option value="T">T – Trimestral</option>
+								    		<option value="A">A – Anual</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".FORMA_APUR">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="COD_QUALIF_PJ" class="col-sm-6 control-label">7 - COD_QUALIF_PJ - Qualificação da Pessoa Jurídica</label>
+								    <div class="col-sm-5">
+								    	<select name="COD_QUALIF_PJ" id="COD_QUALIF_PJ" class="form-control">
+								    		<option value=""></option>
+								    		<option value="01">01 – PJ em Geral</option>
+								    		<option value="02">02 – PJ Componente do Sistema Financeiro</option>
+								    		<option value="03">03 - Sociedades Seguradoras, de Capitalização ou Entidade Aberta de Previdência Complementar</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".COD_QUALIF_PJ">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="FORMA_TRIB_PER" class="col-sm-6 control-label">8 - FORMA_TRIB_PER - Forma de Tributação no Período</label>
+								    <div class="col-sm-5">
+								    	<input type="text" class="form-control" maxlength="4" id="FORMA_TRIB_PER" placeholder="XXXX">
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".FORMA_TRIB_PER">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="MES_BAL_RED" class="col-sm-6 control-label">9 - MES_BAL_RED - Forma de Apuração da Estimativa Mensal</label>
+								    <div class="col-sm-5">
+								    	<input type="text" class="form-control" maxlength="12" id="MES_BAL_RED" placeholder="XXXXXXXXXXXX">
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".MES_BAL_RED">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="TIP_ESC_PRE" class="col-sm-6 control-label">10 - TIP_ESC_PRE - Escrituração</label>
+								    <div class="col-sm-5">
+								    	<select name="TIP_ESC_PRE" id="TIP_ESC_PRE" class="form-control">
+								    		<option value=""></option>
+								    		<option value="C">C – Obrigadas a entregar a ECD ou entrega facultativa da ECD com recuperação de dados</option>
+								    		<option value="L">L – Livro Caixa ou não obrigadas a entregar a ECD ou entrega facultativa da ECD sem recuperação de dados.</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".TIP_ESC_PRE">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="TIP_ENT" class="col-sm-6 control-label">11 - TIP_ENT - Tipo de Pessoa Jurídica Imune ou Isenta</label>
+								    <div class="col-sm-5">
+								    	<select name="TIP_ENT" id="" class="form-control">
+								    		<option value=""></option>
+								    		<option valur="01">01 – Assistência Social</option>
+											<option valur="02">02 – Educacional</option>
+											<option valur="03">03 – Sindicato de Trabalhadores</option>
+											<option valur="04">04 – Associação Civil</option>
+											<option valur="05">05 – Cultural</option>
+											<option valur="06">06 – Entidade Fechada de Previdência Complementar</option>
+											<option valur="07">07 – Filantrópica</option>
+											<option valur="08">08 – Sindicato</option>
+											<option valur="09">09 – Recreativa</option>
+											<option valur="10">10 – Científica</option>
+											<option valur="11">11 – Associação de Poupança e Empréstimo</option>
+											<option valur="12">12 – Entidade Aberta de Previdência Complementar (Sem Fins Lucrativos)</option>
+											<option valur="13">13 – Fifa e Entidades Relacionadas</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".TIP_ENT">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="FORMA_APUR_I" class="col-sm-6 control-label">12 - FORMA_APUR_I - Apuração do IRPJ para Imunes ou Isentas</label>
+								    <div class="col-sm-5">
+								    	<select name="FORMA_APUR_I" id="FORMA_APUR_I" class="form-control">
+								    		<option value=""></option>
+								    		<option value="A">A – Anual</option>
+											<option value="T">T – Trimestral</option>
+											<option value="D">D – Desobrigada</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".FORMA_APUR_I">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="APUR_CSLL" class="col-sm-6 control-label">13 - APUR_CSLL - Apuração da CSLL para Imunes ou Isentas</label>
+								    <div class="col-sm-5">
+								    	<select name="APUR_CSLL" id="APUR_CSLL" class="form-control">
+								    		<option value=""></option>
+								    		<option value="A">A – Anual</option>
+											<option value="T">T – Trimestral</option>
+											<option value="D">D – Desobrigada</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".APUR_CSLL">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="OPT_EXT_RTT" class="col-sm-6 control-label">14 - OPT_EXT_RTT - Optante pela extinção do RTT no ano-calendário de 2014</label>
+								    <div class="col-sm-5">
+								    	<select name="OPT_EXT_RTT" required id="OPT_EXT_RTT" class="form-control">
+								    		<option value=""></option>
+								    		<option value="S">S – Sim</option>
+											<option value="N">N – Não</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".OPT_EXT_RTT">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+								<div class="form-group">
+									<label for="DIF_FCONT" class="col-sm-6 control-label">15 - DIF_FCONT - Existe diferenças entre a contabilidade societária e Fcont</label>
+								    <div class="col-sm-5">
+								    	<select name="DIF_FCONT" required id="DIF_FCONT" class="form-control">
+								    		<option value=""></option>
+								    		<option value="S">S – Sim</option>
+											<option value="N">N – Não</option>
+								    	</select>
+								    </div>
+								    <div class="col-md-1">
+								    	
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target=".DIF_FCONT">
+											<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+										</button>
+								    </div>
+								</div>
+
+							    
+
+							<input type="submit">
+							 
+							</form>
+						</div>
+					</div>
+
+
+
+				</div>
+				<div role="tabpanel" class="tab-pane" id="profile">
+					<div class="panel panel-default">
+						<div class="panel-heading">Panel heading without title</div>
+						<div class="panel-body">
+						Panel content
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="messages">...</div>
+				<div role="tabpanel" class="tab-pane" id="settings">...</div>
+			</div>
+
+
+		</main>
+			
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="modal fade CNPJ" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     	<p>CNPJ: Preencher este campo com o número de inscrição no Cadastro Nacional da Pessoa Jurídica (CNPJ) do declarante.</p>
+			<p>Observação: No caso de arquivo da SCP, deve ser informado neste campo o CNPJ do sócio ostensivo. O CNPJ/Código da SCP, no caso de arquivo da SCP, será informado no 0000.COD_SCP.</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade NOME" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     	<p>Nome Empresarial: Nome empresarial da pessoa jurídica ou da Sociedade em Conta de Participação (SCP).</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade IND_SIT_INI_PER" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     	<p>Indicador do Início do Período:</p>
+			<p>0 – Regular (Início no primeiro dia do ano)</p>
+			<p>1 – Abertura (Início de atividades no ano-calendário)</p>
+			<p>2 – Resultante de cisão/fusão ou remanescente de cisão, ou realizou incorporação</p>
+			<p>4 – Início de obrigatoriedade da entrega no curso do ano calendário. (Ex. Exclusão do Simples Nacional ou desenquadramento como imune ou isenta do IRPJ)</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade SIT_ESPECIAL" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     	<p>Indicador de Situação Especial e Outros Eventos: </p>
+			<p>0 – Normal (Sem ocorrência de situação especial ou evento) </p>
+			<p>1 – Extinção</p>
+			<p>2 – Fusão</p>
+			<p>3 – Incorporação \ Incorporada</p>
+			<p>4 – Incorporação \ Incorporadora</p>
+			<p>5 – Cisão Total</p>
+			<p>6 – Cisão Parcial</p>
+			<p>8 – Desenquadramento de Imune/Isenta; </p>
+			<p>9 – Inclusão no Simples Nacional</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade PAT_REMAN_CIS" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     	<p>Patrimônio Remanescente em Caso de Cisão (%).</p>
+			<p>Obs.: Necessário para o controle de saldos na conta da parte B do LALUR.</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade DT_SIT_ESP" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     	<p>Data da Situação Especial ou Evento: Informar a data da deliberação do evento ou, em caso de extinção da pessoa jurídica, a data em que se ultimou a sua liquidação.</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade RETIFICADORA" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     	<p>Escrituração Retificadora: A pessoa jurídica deve assinalar este campo no caso de escrituração retificadora:</p>
+			<p>S – ECF retificadora</p>
+			<p>N – ECF original</p>
+			<p>F – ECF original com mudança de forma de tributação (art. 5o da Instrução Normativa no 166/1999).</p>
+			<p>A pessoa jurídica poderá efetuar a remessa de arquivo em retificação ao arquivo anteriormente remetido, observando-se a permissão, as regras e prazos estabelecidos pela Secretaria da Receita Federal do Brasil (RFB).</p>
+			<p>Atenção: A substituição das ECF já transmitidas deverá ser feita na sua íntegra, pois a ECF não aceita arquivos complementares para o mesmo período informado. Como há controle de saldos, se houver substituição de uma ECF, pode haver a necessidade de substituição de ECF já transmitidas de anos posteriores.</p>
+	    </div>
+	  </div>
+	</div>
+	
+	<div class="modal fade NUM_REC" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     	<p>CNPJ: Preencher este campo com o número de inscrição no Cadastro Nacional da Pessoa Jurídica (CNPJ) do declarante.</p>
+			<p>Observação: No caso de arquivo da SCP, deve ser informado neste campo o CNPJ do sócio ostensivo. O CNPJ/Código da SCP, no caso de arquivo da SCP, será informado no 0000.COD_SCP.</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade TIP_ECF" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     	<p>Número do Recibo da ECF Anterior (hashcode): Este campo deve ser preenchido com o número constante no recibo de entrega da última ECF transmitida, nos casos de 0000.RETIFICADORA = “S” ou “F”.</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade COD_SCP" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     	<p>Indicador do Tipo da ECF:</p>
+			<p>0 – ECF de empresa não participante de SCP como sócio ostensivo.</p>
+			<p>1 – ECF de empresa participante de SCP como sócio ostensivo.</p>
+			<p>2 – ECF da SCP.</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade HASH_ECF_ANTERIOR" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Hashcode da ECF do Período Imediatamente Anterior a Ser Recuperado. (Escrituração da qual os saldos da parte B do e-LALUR foram recuperados). Campo preenchido automaticamente pelo sistema.
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade OPT_REFIS" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Indicador de Optante pelo Refis:
+			S - Sim
+			N – Não
+			A pessoa jurídica deve assinalar este campo quando for optante pelo Programa de Recuperação Fiscal (Refis).
+			Atenção: Este campo só deve ser assinalado pela pessoa jurídica optante pelo Programa de Recuperação Fiscal (Refis), instituído pela Lei no 9.964, de 10 de abril de 2000,  e que dele não tenha sido excluída. A pessoa jurídica que for apenas optante pelo Parcelamento Especial (Paes) de que trata a Lei no 10.684, de 30 de maio de 2003, e outros reparcelamentos não deve assinalar este campo. 
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade OPT_PAES" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Indicador de Optante pelo Paes:
+			S – Sim
+			N – Não
+			A pessoa jurídica deve assinalar este campo quando for optante pelo Parcelamento Especial (Paes), de que trata a Lei nº 10.684, de 30 de maio de 2003.
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade FORMA_TRIB" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Dica: Caso deseje adicionar informações do Scritta, utilize a fórmula <#empresa.tributacaoirpjcsll>.
+			Forma de Tributação:
+			1 – Lucro Real.
+			2 – Lucro Real/Arbitrado.
+			3 – Lucro Presumido/Real.
+			4 – Lucro Presumido/Real/Arbitrado.
+			5 – Lucro Presumido.
+			6 – Lucro Arbitrado.
+			7 – Lucro Presumido/Arbitrado.
+			8 – Imune do IRPJ.
+			9 – Isenta do IRPJ.
+			A forma de tributação do IRPJ (Imposto de Renda Sobre a Renda da Pessoa Jurídica) e, consequentemente, da CSLL (Contribuição Social Sobre o Lucro Líquido) adotada, indica que a pessoa jurídica tributada com base no:
+			1) Lucro Real: Apurou imposto de renda com base no lucro real.
+			2) Lucro Real/Arbitrado: Apurou imposto de renda com base no lucro real, com arbitramento da base de cálculo em algum trimestre do ano-calendário.
+			3) Lucro Presumido/Real:
+			- Optou pelo lucro presumido por força de ingresso no Refis e, no decorrer do ano-calendário, foi excluída do Programa e passou a ser obrigatoriamente tributada com base no lucro real.
+			- Iniciou o ano-calendário pagando o imposto com base no lucro presumido e, em relação ao mesmo ano, incorreu em situação de obrigatoriedade de apuração pelo lucro real por ter auferido lucros, rendimentos ou ganhos de capital oriundos do exterior.
+			4) Lucro Presumido/Real/Arbitrado: Além da tributação com base no lucro presumido e no lucro real, foi tributada pelo lucro arbitrado em algum trimestre do ano-calendário.
+			5) Lucro Presumido: Apurou imposto de renda com base no lucro presumido.
+			6) Lucro Arbitrado: Apurou imposto de renda com base no lucro arbitrado em todos os trimestres do ano-calendário.
+			7) Lucro Presumido/Arbitrado: Apurou imposto de renda com base no lucro presumido, com arbitramento da base de cálculo em algum trimestre do ano-calendário.
+			8) Imune do IRPJ: É imune do imposto de renda.
+			9) Isenta do IRPJ: É isenta do imposto de renda.
+			Atenção: Na hipótese de obrigatoriedade de apuração pelo lucro real por ter auferido lucros, rendimentos ou ganhos de capital oriundos do exterior, a pessoa jurídica deve apurar o IRPJ e a CSLL sob o regime de apuração pelo lucro real trimestral a partir, inclusive, do trimestre da ocorrência do fato.
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade FORMA_APUR" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Dica: Caso deseje adicionar informações do Scritta, utilize a fórmula <#empresa.apuracaoirpjcsll>.
+			Indicador do Período de Apuração do IRPJ e da CSLL:
+			T – Trimestral
+			A – Anual
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade COD_QUALIF_PJ" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Qualificação da Pessoa Jurídica:
+			01 – PJ em Geral
+			02 – PJ Componente do Sistema Financeiro
+			03 – Sociedades Seguradoras, de Capitalização ou Entidade Aberta de Previdência Complementar
+			Atenção: Não preencher no caso de imunes e isentas (preencher o 0010.TIP_ENT).
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade FORMA_TRIB_PER" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Forma de Tributação no Período: Forma de tributação no período considerando para cada trimestre no formato XXXX onde X é igual a:
+			0 – ZERO – Não informado – trimestre não compreendido no período de apuração.
+			R – Real
+			P – Presumido
+			A – Arbitrado
+			E – Real Estimativa
+			Observação: Caso a 0010.FORMA_TRIB seja igual “3” (Presumido/Real) ou “4” (Presumido/Real/Arbitrado) e houver opção pelo REFIS (0010.OPT_REFIS), o período tributado pelo lucro real deve ter somente a forma de apuração trimestral (Caso em que deve ser utilizado “R” em 0010.FORMA_TRIB_PER) ou somente a forma de apuração correspondente à anual/estimativa (Caso em que deve ser utilizado “E” em 0010.FORMA_TRIB_PER).
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade MES_BAL_RED" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Forma de Apuração da Estimativa Mensal: Indicação da forma de apuração da estimativa mensal, quando 0010.FORMA_APUR = “A”, considerando o formato XXXXXXXXXXXX onde X é referente a um mês e é igual a:
+			0 – Fora do Período: Fora do período de apuração/ Forma de tributação diferente de “R” ou “E”.
+			E – Receita Bruta: Estimativa com base na receita bruta e acréscimos.
+			B – Balanço ou Balancete: Estimativa com base no balanço ou balancete de suspensão/redução.
+			Os meses correspondentes a trimestres marcados em 0010.FORMA_TRIB_PER como diferente de “R” e “E” devem estar preenchidos com zero “0”. 
+			Os meses correspondentes a trimestres marcados em 0010.FORMA_TRIB_PER iguais a “R” ou “E” devem estar preenchidos com “E” ou “B”.
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade TIP_ESC_PRE" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Escrituração:
+			C – Obrigadas a entregar a ECD ou entrega facultativa da ECD com recuperação de dados.
+			L – Livro Caixa ou não obrigadas a entregar a ECD ou entrega facultativa da ECD sem recuperação de dados.
+			Atenção:
+			- A hipóste prevista no §1o do art. 129, Instrução Normativa no 1.515/2014 prevê que a pessoa jurídica que mantiver escrituração contábil, na forma da legislação comercial, deverá controlar os recebimentos de suas receitas em conta específica, na qual, em cada lançamento, será indicada a nota fiscal a que corresponder o recebimento.
+			- A opção “C” contábil corresponde às pessoas jurídicas tributadas pelo lucro presumido ou imunes ou isentas que estão obrigadas a entregar a ECD (Escrituração Contábil Digital), além de todas as pessoas jurídicas tributadas pelo lucro real, de acordo com a Instrução Normativa no 1.420/2013.
+			- Caso a empresa não seja obrigada a entregar a ECD, mas facultativamente, entregue a ECD para recuperação dos dados na ECF, deve preencher a opção “C”.
+			Exemplos:
+			1 – Lucro Real: Não preencher o campo.
+			2 - Lucro Presumido: Preencher L, quando utilizar livro caixa ou não está obrigada a entregar a ECD e não quer recuperar os dados da ECD (que pode ter sido entregue facultativamente) na ECF.
+			3 - Lucro Presumido: Preencher C, quando está obrigada a entregar a ECD ou não está obrigada à ECD, mas quer recuperar os dados da ECD (que pode ter sido entregue facultativamente) na ECF.
+			4 - Imunes/Isentas: Preencher L, quando não está obrigada a entregar a ECD e não quer recuperar os dados da ECD (que pode ter sido entregue facultativamente) na ECF.
+			5 - Imunes/Isentas: Preencher C, quando está obrigada a entregar a ECD ou não está obrigada à ECD, mas quer recuperar os dados da ECD (que pode ter sido entregue facultativamente) na ECF.
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade TIP_ENT" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Tipo de Pessoa Jurídica Imune ou Isenta:
+			01 – Assistência Social 
+			02 – Educacional
+			03 – Sindicato de Trabalhadores 
+			04 – Associação Civil 
+			05 – Cultural 
+			06 – Entidade Fechada de Previdência Complementar 
+			07 – Filantrópica 
+			08 – Sindicato 
+			09 – Recreativa 
+			10 – Científica 
+			11 – Associação de Poupança e Empréstimo 
+			12 – Entidade Aberta de Previdência Complementar (Sem Fins Lucrativos) 
+			13 – Fifa e Entidades Relacionadas
+			14 – CIO e Entidades Relacionadas
+			15 – Partidos Políticos
+			99 – Outras.
+			Atenção: Este campo é obrigatório para 0010.FORMA_TRIB igual a “8” (Imune do IRPJ) ou “9” (Isenta do IRPJ). 
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade FORMA_APUR_I" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Dica: Caso deseje adicionar informações do Scritta, utilize a fórmula <#empresa.apuracaoirpjimunesisentas>.
+			Apuração do IRPJ para Imunes ou Isentas: Existência ou não de atividade não abrangida pela imunidade ou isenção e tributada pelo IRPJ (para imunes ou isentas):
+			A – Anual 
+			T – Trimestral
+			D – Desobrigada
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade APUR_CSLL" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Dica: Caso deseje adicionar informações do Scritta, utilize a fórmula <#empresa.apuracaocsllimunesisentas>.
+			Apuração da CSLL para Imunes ou Isentas:
+			A – Anual, se optou pela apuração da CSLL sobre a base de cálculo estimada, facultada a opção pelo levantamento de balanço ou balancete de suspensão ou redução.
+			T – Trimestral, no caso de ter adotado a apuração trimestral da CSLL.
+			D – Desobrigada, na hipótese de pessoa jurídica imune ou isenta da CSLL.
+			Atenção:
+			1) As entidades sem fins lucrativos de que trata o inciso I do art. 12 do Decreto nº 3.048, de 6 de maio de 1999, que não se enquadram na imunidade e isenção da Lei nº 9.532, de 10 de dezembro de 1997, estão sujeitas à CSLL, devendo apurar a base de cálculo e a contribuição devida nos termos da legislação comercial.
+			2) As associações de poupança e empréstimo devem apurar a contribuição social sobre o lucro líquido.
+			3) São isentas da CSLL as entidades fechadas de previdência complementar, relativamente aos fatos geradores ocorridos a partir de 1º de janeiro de 2002.
+			4) As entidades sujeitas a planificação contábil própria apuram a CSLL de acordo com essa planificação.
+			Atenção: Este campo é obrigatório para 0010.FORMA_TRIB igual a “8” (Imune do IRPJ) ou “9” (Isenta do IRPJ).
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade OPT_EXT_RTT" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Optante pela extinção do RTT no ano-calendário de 2014:
+			S - Sim
+			N – Não
+			Observação: Esse campo se refere ao art. 75 da Lei no 12.973/2014.
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade DIF_FCONT" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+			Existe diferenças entre a contabilidade societária e Fcont:
+			S - Sim
+			N – Não
+			Observação:
+			Ano-Calendário 2014: Se o 0010.OPT_EXT_RTT for igual a “S”, 0010.DIF_FCONT deve ser preenchido. Caso contrário (0010.OPT_EXT_RTT = “N”), 0010.DIF_FCONT não deve ser preenchido (deixar em branco).
+			Ano-Calendário 2015: Se o 0010.OPT_EXT_RTT for igual a “N”, 0010.DIF_FCONT deve ser preenchido. Caso contrário (0010.OPT_EXT_RTT = “S”), 0010.DIF_FCONT não deve ser preenchido (deixar em branco).
+	    </div>
+	  </div>
+	</div>
+
+
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrapValidator.js"></script>
+	<script src="js/js.js"></script>
+</body>
+</html>
